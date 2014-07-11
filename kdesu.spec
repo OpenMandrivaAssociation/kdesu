@@ -5,7 +5,7 @@
 
 Name: kdesu
 Version: 4.99.0
-Release: 2
+Release: 3
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
 URL: http://kde.org/
