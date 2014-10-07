@@ -4,7 +4,7 @@
 %define debug_package %{nil}
 
 Name: kdesu
-Version: 5.1.0
+Version: 5.3.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
@@ -21,6 +21,7 @@ BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(KF5CoreAddons)
 BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KF5Pty)
+BuildRequires: cmake(KF5I18n)
 BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
@@ -52,8 +53,9 @@ ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+%find_lang kdesud5
 
-%files
+%files -f kdesud5.lang
 %{_libdir}/libexec/kf5/*
 
 %files -n %{libname}
