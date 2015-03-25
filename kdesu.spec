@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdesu
-Version: 5.7.0
+Version: 5.8.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
@@ -27,7 +27,7 @@ BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
-KDE Frameworks 5 library for obtaining superuser privileges
+KDE Frameworks 5 library for obtaining superuser privileges.
 
 %package -n %{libname}
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
@@ -35,7 +35,7 @@ Group: System/Libraries
 Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
-KDE Frameworks 5 library for obtaining superuser privileges
+KDE Frameworks 5 library for obtaining superuser privileges.
 
 %package -n %{devname}
 Summary: Development files for the KDE Frameworks 5 Desu library
@@ -43,7 +43,7 @@ Group: Development/KDE and Qt
 Requires: %{libname} = %{EVRD}
 
 %description -n %{devname}
-Development files for the KDE Frameworks 5 Desu library
+Development files for the KDE Frameworks 5 Desu library.
 
 %prep
 %setup -q
