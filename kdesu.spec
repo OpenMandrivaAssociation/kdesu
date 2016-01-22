@@ -5,8 +5,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdesu
-Version:	5.18.0
-Release:	1
+Version: 5.18.0
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
 URL: http://kde.org/
@@ -53,7 +53,8 @@ Development files for the KDE Frameworks 5 Desu library.
 %find_lang kdesud5
 
 %files -f kdesud5.lang
-%{_libdir}/libexec/kf5/*
+%{_libdir}/libexec/kf5/kdesu_stub
+%attr(2755,root,nogroup) %{_libdir}/libexec/kf5/kdesud
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
