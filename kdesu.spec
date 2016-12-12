@@ -12,6 +12,8 @@ Summary: KDE Frameworks 5 library for obtaining superuser privileges
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
+# compile with fpie
+Patch0: fpie.patch
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: cmake(KF5DocTools)
@@ -43,6 +45,7 @@ Development files for the KDE Frameworks 5 Desu library.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
