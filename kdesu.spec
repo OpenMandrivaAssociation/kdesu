@@ -22,6 +22,7 @@ BuildRequires: cmake(KF5CoreAddons)
 BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KF5Pty)
 BuildRequires: cmake(KF5I18n)
+BuildRequires: cmake(KF5Config)
 Requires: %{libname} = %{EVRD}
 
 %description
