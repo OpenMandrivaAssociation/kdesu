@@ -16,6 +16,7 @@ Group: System/Libraries
 Patch0: fpie.patch
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: cmake(Qt5Test)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Xml)
