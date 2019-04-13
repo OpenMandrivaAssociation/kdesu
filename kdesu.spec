@@ -26,6 +26,7 @@ BuildRequires: cmake(KF5Pty)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5Config)
 # For QCH format docs
+BuildRequires: doxygen
 BuildRequires: qt5-assistant
 Requires: %{libname} = %{EVRD}
 
