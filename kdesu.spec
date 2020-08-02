@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdesu
-Version: 5.72.0
+Version: 5.73.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
@@ -70,6 +70,7 @@ Developer documentation for %{name} for use with Qt Assistant
 
 %files -f kdesud5.lang
 %{_libdir}/libexec/kf5/kdesu_stub
+%{_datadir}/qlogging-categories5/*
 %attr(2755,root,nogroup) %{_libdir}/libexec/kf5/kdesud
 
 %files -n %{libname}
