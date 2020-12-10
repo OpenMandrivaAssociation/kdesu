@@ -5,15 +5,13 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdesu
-Version: 5.76.0
-Release: 2
+Version: 5.77.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for obtaining superuser privileges
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-# compile with fpie
-Patch0: fpie.patch
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: cmake(Qt5Test)
